@@ -169,11 +169,10 @@ export async function bundle(
       plugins: [
         new ReactFlightWebpackPlugin({
           isServer: false,
-          clientReferences, // sprawdzic format tego, porownac z janka i dlaczego dalej jest problem? moze dlatego ze w TesterApp nie ma tej depki?
+          clientReferences,
         }),
       ],
     });
-    console.log('hello!', mergedConfig);
 
     const compiler = webpack(mergedConfig);
 
