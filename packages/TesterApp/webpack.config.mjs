@@ -70,6 +70,7 @@ export default (env) => {
       ...Repack.getInitializationEntries(reactNativePath, {
         hmr: devServer && devServer.hmr,
       }),
+      'fast-text-encoding',
       entry,
     ],
     resolve: {

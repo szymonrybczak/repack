@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 
 import { SafeAreaView, ScrollView, StatusBar } from 'react-native';

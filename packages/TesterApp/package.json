@@ -19,6 +19,7 @@
   "dependencies": {
     "@callstack/repack": "3.6.0",
     "@react-native-async-storage/async-storage": "^1.17.11",
+    "fast-text-encoding": "^1.0.6",
     "lodash.throttle": "^4.1.1",
     "react": "18.2.0",
     "react-native": "^0.72.6",

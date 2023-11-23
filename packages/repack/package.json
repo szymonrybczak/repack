@@ -76,11 +76,14 @@
     "memfs": "^3.4.4",
     "mime-types": "^2.1.35",
     "pretty-format": "^26.6.2",
+    "react": "^18.2.0",
     "react-refresh": "^0.14.0",
+    "react-server-dom-webpack": "file:///Users/szymonrybczak/callstack/react/build/oss-stable-semver/react-server-dom-webpack",
     "schema-utils": "^3.0.0",
     "shallowequal": "^1.1.0",
     "string.prototype.replaceall": "^1.0.6",
-    "tapable": "^2.1.1"
+    "tapable": "^2.1.1",
+    "webpack-merge": "^5.10.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.10",
