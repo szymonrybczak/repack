@@ -61,7 +61,7 @@ export async function bundle(
   const analysisCtx = createAnalysisContext();
 
   const analysisConfig: Configuration = {
-    mode: 'development', // hehe be careful
+    mode: 'development', // FIXME(szymonrybczak): hehe be careful
     devtool: false,
     entry: {
       main: '/Users/szymonrybczak/callstack/repack/packages/TesterApp/index.js',
@@ -159,11 +159,10 @@ export async function bundle(
       // ...NO_TERSER, wtf
     },
   };
-  console.log('1');
-  await webpack(analysisConfig, () => {
-    // console.log('CLIENT REFERENCES', analysisCtx.modules.client);
+
+  await webpack(analysisConfig, (err, stats) => {
+    console.log(err, stats);
     const clientReferences: any = [...analysisCtx.modules.client.keys()];
-    // console.log('CLIENT REFERENCES', clientReferences);
 
     const mergedConfig = mergeWebpackConfigs(webpackConfig, {
       plugins: [
@@ -173,6 +172,8 @@ export async function bundle(
         }),
       ],
     });
+
+    console.log(mergedConfig);
 
     const compiler = webpack(mergedConfig);
 
@@ -230,7 +231,6 @@ export async function bundle(
       });
     });
   });
-  console.log('2');
 
   // const clientReferences: ReactFlightWebpackPluginOptions['clientReferences'] =
   //   [...analysisCtx.modules.client.keys()];

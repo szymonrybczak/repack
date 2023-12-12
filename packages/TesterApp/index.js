@@ -6,6 +6,7 @@ import { name as appName } from './app.json';
 
 ScriptManager.shared.setStorage(AsyncStorage);
 ScriptManager.shared.addResolver(async (scriptId, _caller) => {
+  console.log(scriptId, _caller);
   if (__DEV__) {
     return {
       url: Script.getDevServerURL(scriptId),

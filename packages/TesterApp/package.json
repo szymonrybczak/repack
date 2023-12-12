@@ -23,7 +23,9 @@
     "lodash.throttle": "^4.1.1",
     "react": "file:///Users/szymonrybczak/callstack/react/build/oss-stable-semver/react",
     "react-native": "file:///Users/szymonrybczak/callstack/react-native-fork/packages/react-native",
-    "react-native-svg": "^13.7.0"
+    "react-native-svg": "^13.7.0",
+    "server-only": "^0.0.1",
+    "ts-loader": "^9.5.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
